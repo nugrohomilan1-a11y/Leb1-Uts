@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Buku - Toko Buku</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Toko Buku Online</h2>
+        <a href="dashboard.html" class="btn-kembali">Dashboard</a>
+    </header>
+
+    <main class="checkout-container">
+
+        <section class="checkout-heading">
+            <h1>Pemesanan Buku</h1>
+            <p>Silakan pilih buku dan lengkapi informasi pemesanan.</p>
+        </section>
+
+        <!-- PILIH BUKU -->
+        <section class="checkout-card">
+            <h2>Pilih Buku</h2>
+
+            <div class="pilih-buku">
+                <div>
+                    <label for="pilihBuku">Nama Buku</label>
+                    <select id="pilihBuku">
+                        <option value="">-- Pilih Buku --</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="jumlahPesan">Jumlah</label>
+                    <input type="number" id="jumlahPesan" min="1" value="1">
+                </div>
+
+                <button type="button" id="btnTambahPesanan">
+                    Tambah Pesanan
+                </button>
+            </div>
+        </section>
+
+        <!-- DAFTAR PESANAN -->
+        <section class="checkout-card">
+            <h2>Daftar Pesanan</h2>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Buku</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarPesanan">
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="total-pesanan">
+                Total: <span id="totalHarga">Rp 0</span>
+            </h3>
+        </section>
+
+        <!-- INFORMASI PEMESAN -->
+        <section class="checkout-card">
+            <h2>Informasi Pemesan</h2>
+
+            <form id="formCheckout">
+
+                <div class="checkout-form">
+                    <div>
+                        <label for="namaPemesan">Nama Lengkap</label>
+                        <input type="text" id="namaPemesan" required>
+                    </div>
+
+                    <div>
+                        <label for="emailPemesan">Email</label>
+                        <input type="email" id="emailPemesan" required>
+                    </div>
+
+                    <div>
+                        <label for="teleponPemesan">Nomor Telepon</label>
+                        <input type="tel" id="teleponPemesan" required>
+                    </div>
+
+                    <div>
+                        <label for="alamatPemesan">Alamat Pengiriman</label>
+                        <textarea id="alamatPemesan" rows="3" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="metodePembayaran">Metode Pembayaran</label>
+                        <select id="metodePembayaran" required>
+                            <option value="">-- Pilih Pembayaran --</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                            <option value="COD">COD</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-checkout">
+                    Buat Pesanan
+                </button>
+
+            </form>
+        </section>
+
+        <!-- RIWAYAT TRANSAKSI -->
+        <section class="checkout-card" id="riwayat">
+            <h2>History Transaksi</h2>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pemesan</th>
+                            <th>Email</th>
+                            <th>Total</th>
+                            <th>Pembayaran</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarRiwayat">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

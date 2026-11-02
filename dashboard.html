@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Toko Buku Online</h2>
+
+        <button id="btnLogout" class="btn-logout">
+            Logout
+        </button>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+            <h1 id="greeting">Selamat Datang!</h1>
+            <p id="namaUser">Pengguna Toko Buku</p>
+            <p>Selamat berbelanja dan menikmati layanan kami.</p>
+        </section>
+
+        <section class="menu-section">
+            <h2>Menu Utama</h2>
+
+            <div class="menu-grid">
+
+                <a href="stok.html" class="menu-card">
+                    <span class="menu-icon">📚</span>
+                    <h3>Informasi Stok/Katalog</h3>
+                    <p>Lihat daftar dan persediaan buku.</p>
+                </a>
+
+                <a href="tracking.html" class="menu-card">
+                    <span class="menu-icon">🚚</span>
+                    <h3>Tracking Pengiriman</h3>
+                    <p>Pantau status pengiriman buku.</p>
+                </a>
+
+                <a href="checkout.html" class="menu-card">
+                    <span class="menu-icon">🛒</span>
+                    <h3>Laporan Pemesanan</h3>
+                    <p>Lihat dan lakukan pemesanan buku.</p>
+                </a>
+
+                <a href="checkout.html#riwayat" class="menu-card">
+                    <span class="menu-icon">📋</span>
+                    <h3>History Transaksi</h3>
+                    <p>Lihat riwayat transaksi pembelian.</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

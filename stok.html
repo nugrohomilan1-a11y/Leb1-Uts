@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - Toko Buku</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Toko Buku Online</h2>
+        <a href="dashboard.html" class="btn-kembali">Dashboard</a>
+    </header>
+
+    <main class="stok-container">
+
+        <section class="stok-heading">
+            <h1>Informasi Stok Buku</h1>
+            <p>Daftar katalog dan persediaan buku toko kami.</p>
+        </section>
+
+        <section class="tambah-buku">
+            <h2>Tambah Buku Baru</h2>
+
+            <form id="formTambahBuku">
+
+                <div class="input-stok">
+                    <label for="kodeBarang">Kode Barang</label>
+                    <input type="text" id="kodeBarang" required>
+                </div>
+
+                <div class="input-stok">
+                    <label for="namaBarang">Nama Buku</label>
+                    <input type="text" id="namaBarang" required>
+                </div>
+
+                <div class="input-stok">
+                    <label for="jenisBarang">Jenis Buku</label>
+                    <input type="text" id="jenisBarang" required>
+                </div>
+
+                <div class="input-stok">
+                    <label for="edisi">Edisi</label>
+                    <input type="text" id="edisi" required>
+                </div>
+
+                <div class="input-stok">
+                    <label for="stok">Jumlah Stok</label>
+                    <input type="number" id="stok" min="0" required>
+                </div>
+
+                <div class="input-stok">
+                    <label for="harga">Harga</label>
+                    <input type="number" id="harga" min="0" required>
+                </div>
+
+                <button type="submit" class="btn-tambah">
+                    Tambahkan Buku
+                </button>
+
+            </form>
+        </section>
+
+        <section class="tabel-stok">
+            <h2>Daftar Katalog Buku</h2>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Cover</th>
+                            <th>Kode Barang</th>
+                            <th>Nama Buku</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarBuku">
+                        <!-- Data buku ditampilkan melalui JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

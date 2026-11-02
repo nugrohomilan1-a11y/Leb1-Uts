@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - Toko Buku</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Toko Buku Online</h2>
+        <a href="dashboard.html" class="btn-kembali">Dashboard</a>
+    </header>
+
+    <main class="tracking-container">
+
+        <section class="tracking-heading">
+            <h1>Tracking Pengiriman</h1>
+            <p>Periksa status pengiriman pesanan buku kamu.</p>
+        </section>
+
+        <!-- PENCARIAN NOMOR DO -->
+        <section class="tracking-card">
+            <h2>Cari Pengiriman</h2>
+
+            <form id="formTracking">
+
+                <label for="nomorDO">Nomor Delivery Order</label>
+
+                <div class="tracking-search">
+                    <input
+                        type="text"
+                        id="nomorDO"
+                        placeholder="Contoh: 20230012"
+                        required
+                    >
+
+                    <button type="submit">
+                        Cari
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- HASIL TRACKING -->
+        <section id="hasilTracking" class="tracking-card" hidden>
+
+            <h2>Informasi Pengiriman</h2>
+
+            <div class="tracking-info">
+
+                <div>
+                    <span>Nomor DO</span>
+                    <strong id="hasilDO">-</strong>
+                </div>
+
+                <div>
+                    <span>Nama Pemesan</span>
+                    <strong id="hasilNama">-</strong>
+                </div>
+
+                <div>
+                    <span>Status Pengiriman</span>
+                    <strong id="hasilStatus">-</strong>
+                </div>
+
+                <div>
+                    <span>Ekspedisi</span>
+                    <strong id="hasilEkspedisi">-</strong>
+                </div>
+
+                <div>
+                    <span>Tanggal Kirim</span>
+                    <strong id="hasilTanggal">-</strong>
+                </div>
+
+                <div>
+                    <span>Jenis Paket</span>
+                    <strong id="hasilPaket">-</strong>
+                </div>
+
+                <div>
+                    <span>Total Pembayaran</span>
+                    <strong id="hasilTotal">-</strong>
+                </div>
+
+            </div>
+
+            <h3 class="status-title">Progres Pengiriman</h3>
+
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar">
+                    0%
+                </div>
+            </div>
+
+            <h3 class="status-title">Riwayat Perjalanan</h3>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Waktu</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="riwayatPerjalanan">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
